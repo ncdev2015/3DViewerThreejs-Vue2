@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <h2>3D Viewer with Three.js and Vue 2</h2>
+  <div id="app">    
     <Viewer/>
   </div>
 </template>

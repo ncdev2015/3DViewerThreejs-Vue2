@@ -3,28 +3,26 @@
 </template>
 
 <script>
-import ViewerJS from './classes/viewer.js'
+import Viewer from './classes/viewer.js'
+
 export default {
   name: 'Viewer',
   componentes: {
-    ViewerJS
   },
   data() {
     return {
-      width: 100,
-      height: 100,
       viewer: null
     }
   },
   mounted() {
     this.initViewer();
-    this.addViewer();
+    this.appendViewer();
   },
   methods: {
     initViewer() {
-      this.viewer = new ViewerJS(window.innerWidth-30, window.innerHeight);
+      this.viewer = new Viewer(window.innerWidth, window.innerHeight);
     },
-    addViewer() {
+    appendViewer() {
       document.getElementById("viewer").appendChild(this.viewer.renderer.domElement);
     }
   },  
